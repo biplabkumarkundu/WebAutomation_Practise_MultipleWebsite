@@ -43,10 +43,12 @@ public class wafilifeTestCases extends DriverSetup {
         clickOneElement(addToCartPage.nextPageArrow);
         Assert.assertTrue(is_element_visible(addToCartPage.any_author));
         Assert.assertEquals(getElement(addToCartPage.any_author).getText(),"Mashhur Hasan Salman");
+        Thread.sleep(2000);
 
         clickOneElement(addToCartPage.any_author); //Select any Author
         Assert.assertTrue(is_element_visible(addToCartPage.any_book));
         Assert.assertEquals(getElement(addToCartPage.any_book).getText(),"The Concise Presentation of the Fiqh");
+        Thread.sleep(2000);
 
         clickOneElement(addToCartPage.any_book); //View any Book Details
         Assert.assertTrue(is_element_visible(addToCartPage.order_korun_btn));

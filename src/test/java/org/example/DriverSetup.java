@@ -56,6 +56,7 @@ public class DriverSetup {
         Select select=new Select(el);
         select.selectByVisibleText(value);
     }
+
     public Boolean is_element_visible(By locator) {
         try {
             return getElement(locator).isDisplayed();
