@@ -52,7 +52,7 @@ Assert.assertTrue(is_element_visible(addToCartPage.cartForAssert));
         clickOneElement(checkOutPage.shippingOptions);
         clickOneElement(checkOutPage.addANote);
         writeOnElement(checkOutPage.addANoteText,"Your Testing End here");
-
+        //Log Out
         Thread.sleep(3000);
     }
 }

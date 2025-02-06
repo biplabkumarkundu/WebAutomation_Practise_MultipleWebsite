@@ -1,6 +1,7 @@
 package org.example;
 
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,14 +22,21 @@ public class DriverSetup {
         //Open a bowser
         //WebDriverManager.chromedriver().setup();
 
-
-        driver = new ChromeDriver();
+//        WebDriverManager.chromedriver().setup();
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--disable-popup-blocking");
+//        options.addArguments("--disable-notifications");
+//       options.addArguments("--disable-ads");
+//        driver = new ChromeDriver(options);
+driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
-        //browser=new EdgeDriver();
-        ChromeOptions options=new ChromeOptions();
-        options.addArguments("--disable-popup-blocking");
-        options.addArguments("--disable-ads");
+////
+////
+////        driver.manage().window().maximize();
+//        //browser=new EdgeDriver();
+
+
     }
 
     @AfterSuite
@@ -45,6 +53,11 @@ public class DriverSetup {
     public void clickOneElement(By locator){
 
         getElement(locator).click();
+    }
+    public void clickTwoElement(By locator ,By locator2){
+
+        getElement(locator).click();
+        getElement(locator2).click();
     }
     public void writeOnElement(By locator, String text){
 
